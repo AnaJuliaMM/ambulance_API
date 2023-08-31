@@ -16,28 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-
-
-"""
-Para projetos grande: utilizar o classe DefaultRouter() Roteador Padrão
-
 from rest_framework import routers
 from ambulance.viewsets.ambulanceViewSet import AmbulanceViewSet
 from ambulance.viewsets.paramedicViewSet import ParamedicViewSet
+
+#Para projetos grande: utilizar o classe DefaultRouter() Roteador Padrão
+
+
 
 route = routers.DefaultRouter()
 route.register('ambulance', AmbulanceViewSet)
 route.register('paramedic', ParamedicViewSet)
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(route.urls)),
-]
-
-"""
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ambulance.urls')), #redireciona para o arquivo urls.py da aplicação "ambulancw"
+    path('', include(route.urls)), #redireciona para o arquivo urls.py da aplicação "ambulancw"
 ]
