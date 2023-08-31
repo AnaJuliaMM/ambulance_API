@@ -39,5 +39,5 @@ urlpatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ambulances/', include('ambulance.urls')), #redireciona para o arquivo urls.py da aplicação "ambulancw"
+    path('', include('ambulance.urls')), #redireciona para o arquivo urls.py da aplicação "ambulancw"
 ]
