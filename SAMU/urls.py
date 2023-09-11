@@ -23,13 +23,15 @@ from ambulance.viewsets.paramedicViewSet import ParamedicViewSet
 #Para projetos grande: utilizar o classe DefaultRouter() Roteador Padrão
 
 
-
+# The class that contains the routes and  the View to be activate 
 route = routers.DefaultRouter()
+
 route.register('ambulance', AmbulanceViewSet)
 route.register('paramedic', ParamedicViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(route.urls)), #redireciona para o arquivo urls.py da aplicação "ambulancw"
+     #redireciona para o arquivo urls.py da aplicação "ambulancw"
+    path('', include(route.urls)),
 ]
