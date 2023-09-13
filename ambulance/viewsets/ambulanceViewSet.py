@@ -1,10 +1,22 @@
+
+# Import necessary modules from the Django Rest Framework
 from rest_framework import viewsets
+
+# Import the serializer and model for the AmbulanceEntity
 from ambulance.serializers.ambulanceSerializer import AmbulanceSerializer
 from ambulance.models.ambulanceEntity import AmbulanceEntity
 
-# Class that extends the ModelViewSet implementations of the operations CRUD(create, read, updete and delete) in the Data Base
 class AmbulanceViewSet(viewsets.ModelViewSet):
-    # Get all the registers of the table Ambulance in the data base
+    """
+    A viewset class for managing AmbulanceEntity instances.
+
+    Attributes:
+        queryset (QuerySet): A queryset to retrieve all AmbulanceEntity objects from the database.
+        serializer_class (Serializer): The serializer class for serializing and deserializing AmbulanceEntity objects.
+    """
+
+    # Set the queryset to retrieve all AmbulanceEntity objects from the database
     queryset = AmbulanceEntity.objects.all()
-    # Define the serializer class to be used with the objects recovered in with the "queryset" variable
+
+    # Set the serializer class to use for serializing and deserializing AmbulanceEntity objects
     serializer_class = AmbulanceSerializer

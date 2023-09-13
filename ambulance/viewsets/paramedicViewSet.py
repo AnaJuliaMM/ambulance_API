@@ -1,10 +1,21 @@
+# Import necessary modules from the Django Rest Framework
 from rest_framework import viewsets
+
+# Import the serializer and model for the ParamedicEntity
 from ambulance.serializers.paramedicSerializer import ParamedicSerializer
 from ambulance.models.paramedicEntity import ParamedicEntity
 
-# Class that extends the ModelViewSet implementations of the operations CRUD(create, read, updete and delete) in the Data Base
 class ParamedicViewSet(viewsets.ModelViewSet):
-    #Get all the registers of the table Paramedic in the data base
+    """
+    A viewset class for handling ParamedicEntity instances.
+
+    Attributes:
+        queryset (QuerySet): A queryset to retrieve all ParamedicEntity objects from the database.
+        serializer_class (Serializer): The serializer class for serializing and deserializing ParamedicEntity objects.
+    """
+
+    # Set the queryset to retrieve all ParamedicEntity objects from the database
     queryset = ParamedicEntity.objects.all()
-    # Define the serializer class to be used with the objects recovered in with the "queryset" variable
+
+    # Set the serializer class to use for serializing and deserializing ParamedicEntity objects
     serializer_class = ParamedicSerializer
