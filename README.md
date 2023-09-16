@@ -1,7 +1,7 @@
 # Sistema de Controle de Ambulâncias e Paramédicos 🚑
-*(en)*This project is an API built with Django and Django Rest Framework to manage ambulances and paramedics with endpoints to create, list, update and delete them.
+*(en)* This project is an API built with Django and Django Rest Framework to manage ambulances and paramedics with endpoints to create, list, update and delete them.
 
-*(pt-br)*Este projeto utiliza o Django e o Django Rest Framework para criar uma API para gerenciar ambulâncias e paramédicos em uma organização de serviços médicos de emergência.
+*(pt-br)* Este projeto utiliza o Django e o Django Rest Framework para criar uma API para gerenciar ambulâncias e paramédicos em uma organização de serviços médicos de emergência.
 
 ## Recursos da API
 Este sistema permite o gerenciamento eficiente de ambulâncias e paramédicos, incluindo as seguintes funcionalidades principais:
