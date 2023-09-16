@@ -16,7 +16,7 @@ class AmbulanceEntity(models.Model):
         __str__: Returns a string representation of the ambulance entity.
     """
 
-    # Predefined choices for ambulance types
+    # Predefined choices for ambulance types to be used in forms
     types = [
         ("a", "Basic Life Support Ambulance"),
         ("b", "Intermediate Life Support Ambulance"),
