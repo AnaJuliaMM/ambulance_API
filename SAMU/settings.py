@@ -79,10 +79,18 @@ WSGI_APPLICATION = 'SAMU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lsbisoco',          # Nome do banco de dados
+        'USER': 'lsbisoco',          # Nome de usuário
+        'PASSWORD': 'ejydliDa6CHikvZ0VsBo1ZnmkJnJslpy',  # Senha
+        'HOST': 'berry.db.elephantsql.com',  # Nome ou endereço do servidor
+        'PORT': '5432',              # Porta do servidor (normalmente é 5432)
     }
 }
+
+
+
+
 
 
 # Password validation

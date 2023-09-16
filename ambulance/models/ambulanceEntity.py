@@ -23,8 +23,8 @@ class AmbulanceEntity(models.Model):
         ("c", "Advanced Life Support Ambulance")
     ]
 
-    chassi_code = models.CharField(max_length=17)
-    license_plate = models.CharField(max_length=7)
+    chassi_code = models.CharField(max_length=17, unique=True)
+    license_plate = models.CharField(max_length=7, unique=True)
     base = models.CharField(max_length=50)
     type = models.CharField(choices=types, max_length=100)
     is_avaiable = models.BooleanField()
