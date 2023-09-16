@@ -1,0 +1,2 @@
+from .ambulanceEntity import AmbulanceEntity
+from .paramedicEntity import ParamedicEntity

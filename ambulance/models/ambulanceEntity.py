@@ -37,4 +37,4 @@ class AmbulanceEntity(models.Model):
         Ambulance- license plate = ABC123, type = Basic Life Support Ambulance, status = Available
         """
         status = "Available" if self.is_avaiable else "Not available"
-        return f'Ambulance- license plate = {self.license_plate}, type = {self.get_type_display()}, status = {status}'
+        return f'license plate = {self.license_plate}, type = {self.get_type_display()}, status = {status}'

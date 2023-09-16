@@ -10,6 +10,7 @@ class ParamedicSerializer(serializers.ModelSerializer):
 
     It contains an internal class called Meta
     """
+    ambulance = serializers.StringRelatedField(read_only=True)
 
     class Meta:
         """
