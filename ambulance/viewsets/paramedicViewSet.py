@@ -62,7 +62,7 @@ class ParamedicViewSet(viewsets.ModelViewSet):
             serializer = ParamedicSerializer(data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save(ambulance=ambulance)
-            return Response({'message': 'Objeto criado com sucesso', 'data': serializer.data})
+            return Response({'message': 'Objeto criado com sucesso', 'data': serializer.data}, status=status.HTTP_201_CREATED )
         except ValidationError as e:
             return Response({'message': 'Erro de validação', 'errors': e.detail}, status=status.HTTP_400_BAD_REQUEST)
 

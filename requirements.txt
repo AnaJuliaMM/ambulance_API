@@ -5,6 +5,7 @@ djangorestframework==3.14.0
 drf-yasg==1.21.7
 inflection==0.5.1
 packaging==23.1
+psycopg2==2.9.7
 pytz==2023.3.post1
 PyYAML==6.0.1
 sqlparse==0.4.4
