@@ -1,5 +1,7 @@
 # Sistema de Controle de Ambulâncias e Paramédicos 🚑
-Este projeto utiliza o Django e o Django Rest Framework para criar uma API para gerenciar ambulâncias e paramédicos em uma organização de serviços médicos de emergência.
+*(en)*This project is an API built with Django and Django Rest Framework to manage ambulances and paramedics with endpoints to create, list, update and delete them.
+
+*(pt-br)* Este projeto utiliza o Django e o Django Rest Framework para criar uma API para gerenciar ambulâncias e paramédicos em uma organização de serviços médicos de emergência.
 
 ## Recursos da API
 Este sistema permite o gerenciamento eficiente de ambulâncias e paramédicos, incluindo as seguintes funcionalidades principais:
@@ -21,7 +23,6 @@ A API está documentada em dois níveis
     - *"/swagger"* - collections
     - *"/redoc"* - documentação
 
-
 ## Requisitos
 
 Antes de começar a utilizar este sistema, certifique-se de ter os seguintes requisitos instalados:
@@ -31,7 +32,7 @@ Antes de começar a utilizar este sistema, certifique-se de ter os seguintes req
 
 ## Instruções de Execução
 
-1- Clone este repositório em seu computador:  ```git clone https://github.com/AnaJuliaMM/ambulance_API.git``` </br>
+1- Clone este repositório em seu computador (branch main):  ```git clone https://github.com/AnaJuliaMM/ambulance_API.git``` </br>
 2- Navegue ao diretótio do projeto: `cd ambulance_API`  </br>
 3- Crie um ambiente virtual (opcional, mas recomendado): `python -m venv .env`  </br>
 4- Ative o ambiente virtual: **window** - `venv\Scripts\activate` | **linux** - `source venv/bin/activate`  </br>
