@@ -1,5 +1,5 @@
 """
-URL configuration for the SAMU project.
+URL configuration for the core project.
 
 The `urlpatterns` list routes URLs to views. For more information, please see:
 https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -30,11 +30,11 @@ from rest_framework import permissions
 # Define the schema view for API documentation
 schema_view = get_schema_view(
     openapi.Info(
-        title="SAMU API",
+        title="core API",
         default_version='v1',
-        description="API documentation for the SAMU project",
+        description="API documentation for the core project",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@samu.local"),
+        contact=openapi.Contact(email="contact@core.local"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
