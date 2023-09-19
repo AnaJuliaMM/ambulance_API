@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config # Import the decouple library to read environment variables
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,16 +80,25 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+# settings.py
+
+# Import the decouple library to read environment variables
+from decouple import config
+
+# Configure the database settings using environment variables with a default value
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lsbisoco',          # Nome do banco de dados
-        'USER': 'lsbisoco',          # Nome de usuário
-        'PASSWORD': 'ejydliDa6CHikvZ0VsBo1ZnmkJnJslpy',  # Senha
-        'HOST': 'berry.db.elephantsql.com',  # Nome ou endereço do servidor
-        'PORT': '5432',              # Porta do servidor (normalmente é 5432)
+        'ENGINE': config('DB_ENGINE'),  # Default value for DB_ENGINE
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
 }
+
 
 
 
