@@ -19,36 +19,37 @@ Quando necessário, as interação entre as camadas utilizam as classes *seriali
 ## Documentação
 A API está documentada em dois níveis
 - **Nível de código**: através de comentários e Docstring
-- **Collection**: implementada através da biblioteca drf-yasg. Rotas de acesso:
+- **Swagger**: implementada através da biblioteca drf-yasg. Rotas de acesso:
     - *"/swagger"* - collections
     - *"/redoc"* - documentação
+- **Postman collections**
 
 
 ## Requisitos
-
 Antes de começar a utilizar este sistema, certifique-se de ter os seguintes requisitos instalados:
-- Python 3.11
-- Outras dependências do projeto (listadas no arquivo requirements.txt)
+- Docker e Docker-compose
 
 
 ## Instruções de Execução
 
 1- Clone este repositório em seu computador:  ```git clone https://github.com/AnaJuliaMM/ambulance_API.git``` </br>
 2- Navegue ao diretótio do projeto: `cd ambulance_API`  </br>
-3- Crie um ambiente virtual (opcional, mas recomendado): `python -m venv .env`  </br>
-4- Ative o ambiente virtual: **window** - `venv\Scripts\activate` | **linux** - `source venv/bin/activate`  </br>
-5- Instale as dependências do projeto:  `pip install -r requirements.txt` </br> 
+<br>
+No sistema operacional onde você está executando o Docker, aplique os seguintes comandos:
+<br>
+3-Construa e inicie os contêineres com Docker Compose: `docker-compose up -d`  </br>
+4- Crie e aplique migrações: <br>
+`docker-compose exec ambulance_api python manage.py makemigrations` <br>
+`docker-compose exec ambulance_api python manage.py migrate`  </br>
+5- Acesse a API em *http://127.0.0.1:8000/* <br>
 
-### Configuração do Banco de Dados
-1- Abra o arquivo `settings.py` localizado na pasta `core` e configure as configurações do banco de dados de acordo com suas preferências. Por padrão, é usado o SQLite. <br>
-2- Execute as migrações para criar as tabelas do banco de dados: `python manage.py migrate`
+### Teste
+1- Abra seu postman
+2- Importe o arquivo *API.postman_collection.json*
+3- Faça as requisições
 
-### Ativando o servidor
-1- Inicie o servidor de desenvolvimento, a API Django estará disponível em http://localhost:8000/: `python manage.py runserver` </br>  
-
-### Instrução de Desativação
-1- Pare o servidor através do `ctrl+c` </br>
-2 - Desative o ambiente virtual: `deactivate`
+Para desativar a api aplique o seguinte comando:
+`docker-compose down`
 
 Isso é tudo! 😉
 Se precisar de mais ajuda, consulte a documentação oficial do Django em [Django Documentation](https://docs.djangoproject.com/en/4.2/)
