@@ -38,7 +38,7 @@ Antes de começar a utilizar este sistema, certifique-se de ter os seguintes req
 5- Instale as dependências do projeto:  `pip install -r requirements.txt` </br> 
 
 ### Configuração do Banco de Dados
-1- Abra o arquivo `settings.py` localizado na pasta `SAMU` e configure as configurações do banco de dados de acordo com suas preferências. Por padrão, é usado o SQLite. <br>
+1- Abra o arquivo `settings.py` localizado na pasta `core` e configure as configurações do banco de dados de acordo com suas preferências. Por padrão, é usado o SQLite. <br>
 2- Execute as migrações para criar as tabelas do banco de dados: `python manage.py migrate`
 
 ### Ativando o servidor
