@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "0ff0ab2a-876f-428b-ae6c-0acf0ba409e1",
+		"name": "Ambulance API",
+		"description": "This documentation describes a Postman Collection for interacting with an API developed in Django and Django Rest Framework (DRF) for the control of paramedics and ambulances. This API allows you to create, list, update, and delete paramedic and ambulance records.\n\n## Prerequisites\n\nBefore using this Collection, ensure you have the following:\n\n1. Postman installed on your computer. You can download it from [postman.com](https://www.postman.com/downloads/).\n2. The Django and Django Rest Framework API is already set up and running. Make sure you have the API's base URL ready for use.\n    \n\n# Setting Up the Collection in Postman\n\n1. Open Postman.\n2. Click on \"File\" and select \"Import.\"\n3. Choose the \"Link\" option and paste the link to the corresponding Postman Collection.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29353106"
+	},
+	"item": [
+		{
+			"name": "Ambulances",
+			"item": [
+				{
+					"name": "Update all fields",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chassi_code\": \"\",\r\n    \"license_plate\": \"\",\r\n    \"base\": \"\",\r\n    \"type\": \"\",\r\n    \"is_avaiable\": false,\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update specifics fields",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_avaiable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all ambulances",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_avaiable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE an ambulance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fátima Martins\",\r\n    \"ambulance\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an ambulance by its pk",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fátima Martins\",\r\n    \"ambulance\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE ambulances",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/ambulances/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ambulances",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains endpoints to interact with the ambulances control API"
+		},
+		{
+			"name": "paramedics",
+			"item": [
+				{
+					"name": "GET all paramedics",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fátima Martins\",\r\n    \"ambulance\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a paramedic by its pk",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fátima Martins\",\r\n    \"ambulance\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE a new paramedic",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vítor Hugo\",\r\n    \"ambulance\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a paramedic by its pk",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fátima Martins\",\r\n    \"ambulance\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/5/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE all fields of a paramedic ",
+					"request": {
+						"auth": {
+							"type": "inherit"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vítor Hugo\",\r\n    \"ambulance\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/6/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE specifics fields of a paramedic",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ambulance\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/paramedics/6/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"paramedics",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains endpoints to interact with the paramedics control API"
+		}
+	]
+}
