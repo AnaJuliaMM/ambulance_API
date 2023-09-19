@@ -1,0 +1,33 @@
+# Verion of docker-compose to use 
+version: "3"
+
+services:
+  ambulance_api:
+    build:
+      context: . # Sets the directory for docker-compose to build.
+
+    # Maps port on the local machine to port on Docker image
+    ports:
+      - "8000:8000"
+      
+    volumes: 
+    # Copy changes made to the project to your image in real-time.
+      - .:/app
+    # Handles the command used to run the project in the Docker container.  
+    command: sh -c "python manage.py runserver 0.0.0.0:8000" 
+
+    environment:
+      - DB_HOST=db
+      - DB_NAME=recipe
+      - DB_USER=postgres
+      - DB_PASS=supersecretpassword
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=recipe
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=supersecretpassword
+
