@@ -1,5 +1,5 @@
 # Sistema de Controle de Ambulâncias e Paramédicos 🚑
-*(en)* This project is an API built with Django and Django Rest Framework to manage ambulances and paramedics with endpoints to create, list, update and delete them.
+*(en)* This project is an API built with Django and Django Rest Framework to manage ambulances and paramedics with endpoints to create, list, update, and delete them.
 
 *(pt-br)* Este projeto utiliza o Django e o Django Rest Framework para criar uma API para gerenciar ambulâncias e paramédicos em uma organização de serviços médicos de emergência.
 
@@ -19,40 +19,64 @@ Quando necessário, as interação entre as camadas utilizam as classes *seriali
 ## Documentação
 A API está documentada em dois níveis
 - **Nível de código**: através de comentários e Docstring
+- **Postman collections**
 - **Swagger**: implementada através da biblioteca drf-yasg. Rotas de acesso:
     - *"/swagger"* - collections
     - *"/redoc"* - documentação
-- **Postman collections**
+
 
 
 ## Requisitos
 Antes de começar a utilizar este sistema, certifique-se de ter os seguintes requisitos instalados:
-- Docker e Docker-compose
+- Docker engine e Docker-compose
 
 
 ## Instruções de Execução
 
-1- Clone este repositório em seu computador:  ```git clone https://github.com/AnaJuliaMM/ambulance_API.git``` </br>
-2- Navegue ao diretótio do projeto: `cd ambulance_API`  </br>
-<br>
-No sistema operacional onde você está executando o Docker, aplique os seguintes comandos:
-<br>
-3-Construa e inicie os contêineres com Docker Compose: `docker-compose up -d`  </br>
-4- Crie e aplique migrações: <br>
-`docker-compose exec ambulance_api python manage.py makemigrations` <br>
-`docker-compose exec ambulance_api python manage.py migrate`  </br>
-5- Acesse a API em *http://127.0.0.1:8000/* <br>
+1. Clone este repositório em seu computador:  
+```
+    git clone https://github.com/AnaJuliaMM/ambulance_API.git
+```
+</br>
 
-### Teste
-1- Abra seu postman
-2- Importe o arquivo *API.postman_collection.json*
-3- Faça as requisições
+2. Navegue ao diretótio do projeto: 
+``` 
+    cd ambulance_API
+``` 
+</br>
+</br>
 
-Para desativar a api aplique o seguinte comando:
-`docker-compose down`
+
+No sistema operacional onde você possui o docker engine e o docker compose, aplique os seguintes comandos:
+</br>
+
+3. Construa e inicie os contêineres com Docker Compose: 
+```
+    docker-compose up -d
+```
+</br>
+
+4. Crie e aplique migrações no banco de dados: 
+```
+    docker-compose exec ambulance_api python manage.py makemigrations
+    docker-compose exec ambulance_api python manage.py migrate
+```
+<br>
+
+**Visualize a API em *http://localhost:8000/*** <br>
+
+5. Para desativar, execute o comando a seguir:
+```
+    docker-compose stop
+```
+
+## Opção de Teste
+1. Abra seu *postman*
+2. Importe o arquivo *API.postman_collection.json*
+3. Execute as requisições com os bodies já estruturados
+
 
 Isso é tudo! 😉
-Se precisar de mais ajuda, consulte a documentação oficial do Django em [Django Documentation](https://docs.djangoproject.com/en/4.2/)
 
 
 
